@@ -11,8 +11,9 @@ import hello.hellospring.order.OrderServiceImpl;
 public class OrderApp {
     public static void main(String[] args) {
 
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.provideMemberService();
+        OrderService orderService = appConfig.provideOrderService();
 
         long memberId = 1L;
 

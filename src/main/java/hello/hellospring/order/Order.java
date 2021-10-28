@@ -2,10 +2,10 @@ package hello.hellospring.order;
 
 public class Order {
 
-    private Long memberId;
-    private String itemName;
-    private int itemPrice;
-    private int discountPrice;
+    private final Long memberId;
+    private final String itemName;
+    private final int itemPrice;
+    private final int discountPrice;
 
     public Order(Long memberId, String itemName, int itemPrice, int discountPrice) {
         this.memberId = memberId;
