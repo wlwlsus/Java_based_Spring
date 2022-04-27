@@ -6,37 +6,36 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class   ApplicationContextTest {
+class ApplicationContextTest {
 
-    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+	AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
-    @Test
-    @DisplayName("모든 빈 출력하기")
-    void findAllBean() {
+	@Test
+	@DisplayName("모든 빈 출력하기")
+	void findAllBean() {
 
-        String[] beanDefinitionNames = ac.getBeanDefinitionNames();
+		String[] beanDefinitionNames = ac.getBeanDefinitionNames();
+		for (String beanDefinitionName : beanDefinitionNames) {
+			Object bean = ac.getBean(beanDefinitionName);
+			System.out.println("ApplicationContextTest.findAllBean");
+			System.out.println("name = " + beanDefinitionName + " object = " + bean);
+		}
+	}
 
-        for (String beanDefinitionName : beanDefinitionNames) {
-            Object bean = ac.getBean(beanDefinitionName);
+	@Test
+	@DisplayName("애플리케이션 빈 출력하기")
+	void findApplicationBean() {
+		String[] bdns = ac.getBeanDefinitionNames();
 
-            System.out.println("name = " + beanDefinitionName + " object = " + bean);
-        }
-    }
+		for (String bdn : bdns) {
+			BeanDefinition beanDefinition = ac.getBeanDefinition(bdn);
 
-    @Test
-    @DisplayName("애플리케이션 빈 출력하기")
-    void findApplicationBean() {
-        String[] bdns = ac.getBeanDefinitionNames();
+			if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
+				Object bean = ac.getBean(bdn);
 
-        for (String bdn : bdns) {
-            BeanDefinition beanDefinition = ac.getBeanDefinition(bdn);
+				System.out.println("name = " + bdn + " object = " + bean);
+			}
 
-            if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
-                Object bean = ac.getBean(bdn);
-
-                System.out.println("name = " + bdn + " object = " + bean);
-            }
-
-        }
-    }
+		}
+	}
 }

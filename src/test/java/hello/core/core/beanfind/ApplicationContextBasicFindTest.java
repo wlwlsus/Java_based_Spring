@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class ApplicationContextBasicFindTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
@@ -39,6 +41,6 @@ public class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("빈 이름으로 조회X")
     void findBeanByNameX() {
-        org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class, () -> ac.getBean("xxxxx", MemberService.class));
+        assertThrows(NoSuchBeanDefinitionException.class, () -> ac.getBean("xxxxx", MemberService.class));
     }
 }
