@@ -10,25 +10,25 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class ConfigurationSingletonTest {
 
-  @Test
-  void configurationTest() {
-    ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+	@Test
+	void configurationTest() {
+		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
-    MemberServiceImpl memberService = ac.getBean("provideMemberService", MemberServiceImpl.class);
-    OrderServiceImpl orderService = ac.getBean("provideOrderService", OrderServiceImpl.class);
+		MemberServiceImpl memberService = ac.getBean("provideMemberService", MemberServiceImpl.class);
+		OrderServiceImpl orderService = ac.getBean("provideOrderService", OrderServiceImpl.class);
 
-    MemberRepository memberRepository1 = memberService.getMemberRepository();
-    MemberRepository memberRepository2 = orderService.getMemberRepository();
+		MemberRepository memberRepository1 = memberService.getMemberRepository();
+		MemberRepository memberRepository2 = orderService.getMemberRepository();
 
-    System.out.println(memberRepository1);
-    System.out.println(memberRepository2);
-  }
+		System.out.println("m1 = " + memberRepository1);
+		System.out.println("m2 = " + memberRepository2);
+	}
 
-  @Test
-  void configurationDeep() {
-    ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
-    AppConfig bean = ac.getBean(AppConfig.class);
+	@Test
+	void configurationDeep() {
+		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+		AppConfig bean = ac.getBean(AppConfig.class);
 
-    System.out.println("bean :" + bean.getClass());
-  }
+		System.out.println("bean :" + bean.getClass());
+	}
 }
