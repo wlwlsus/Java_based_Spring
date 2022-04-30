@@ -25,23 +25,23 @@ public class AppConfig {
 //        );
 //    }
 
-    @Bean
-    public MemberService provideMemberService() {
-        return new MemberServiceImpl(provideMemberRepository());
-    }
+	@Bean
+	public MemberService provideMemberService() {
+		return new MemberServiceImpl(provideMemberRepository());
+	}
 
-    @Bean
-    public OrderService provideOrderService() {
-        return new OrderServiceImpl(provideMemberRepository(), provideDiscountPolicy());
-    }
+	@Bean
+	public OrderService provideOrderService() {
+		return new OrderServiceImpl(provideMemberRepository(), provideDiscountPolicy());
+	}
 
-    @Bean
-    public MemberRepository provideMemberRepository() {
-        return new MemoryMemberRepository();
-    }
+	@Bean
+	public MemberRepository provideMemberRepository() {
+		return new MemoryMemberRepository();
+	}
 
-    @Bean
-    public DiscountPolicy provideDiscountPolicy() {
-        return new RateDiscountPolicy();
-    }
+	@Bean
+	public DiscountPolicy provideDiscountPolicy() {
+		return new RateDiscountPolicy();
+	}
 }
