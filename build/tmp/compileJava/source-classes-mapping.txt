@@ -1,0 +1,36 @@
+hello/core/member/Grade.java
+ hello.core.member.Grade
+hello/core/HelloSpringApplication.java
+ hello.core.HelloSpringApplication
+hello/core/order/OrderService.java
+ hello.core.order.OrderService
+hello/core/singleton/SingletonService.java
+ hello.core.singleton.SingletonService
+hello/core/order/Order.java
+ hello.core.order.Order
+hello/core/AutoAppConfig.java
+ hello.core.AutoAppConfig
+hello/core/OrderApp.java
+ hello.core.OrderApp
+hello/core/member/MemberRepository.java
+ hello.core.member.MemberRepository
+hello/core/order/OrderServiceImpl.java
+ hello.core.order.OrderServiceImpl
+hello/core/member/Member.java
+ hello.core.member.Member
+hello/core/member/MemberServiceImpl.java
+ hello.core.member.MemberServiceImpl
+hello/core/discount/RateDiscountPolicy.java
+ hello.core.discount.RateDiscountPolicy
+hello/core/discount/FixDiscountPolicy.java
+ hello.core.discount.FixDiscountPolicy
+hello/core/AppConfig.java
+ hello.core.AppConfig
+hello/core/member/MemoryMemberRepository.java
+ hello.core.member.MemoryMemberRepository
+hello/core/MemberApp.java
+ hello.core.MemberApp
+hello/core/member/MemberService.java
+ hello.core.member.MemberService
+hello/core/discount/DiscountPolicy.java
+ hello.core.discount.DiscountPolicy

@@ -1,0 +1,26 @@
+hello/core/member/MemberServiceTest.java
+ hello.core.member.MemberServiceTest
+hello/core/HelloSpringApplicationTests.java
+ hello.core.HelloSpringApplicationTests
+hello/core/xml/XmlAppContext.java
+ hello.core.xml.XmlAppContext
+hello/core/singleton/SingletonTest.java
+ hello.core.singleton.SingletonTest
+hello/core/core/beanfind/ApplicationContextTest.java
+ hello.core.core.beanfind.ApplicationContextTest
+hello/core/core/beanfind/ApplicationContextSameBeanFindTest.java
+ hello.core.core.beanfind.ApplicationContextSameBeanFindTest
+ hello.core.core.beanfind.ApplicationContextSameBeanFindTest$SameBeanConfig
+hello/core/core/beanfind/ApplicationContextExtendsFindTest.java
+ hello.core.core.beanfind.ApplicationContextExtendsFindTest
+ hello.core.core.beanfind.ApplicationContextExtendsFindTest$TestConfig
+hello/core/core/beanfind/ApplicationContextBasicFindTest.java
+ hello.core.core.beanfind.ApplicationContextBasicFindTest
+hello/core/order/OrderServiceTest.java
+ hello.core.order.OrderServiceTest
+hello/core/singleton/SingletonServiceTest.java
+ hello.core.singleton.SingletonServiceTest
+hello/core/singleton/ConfigurationSingletonTest.java
+ hello.core.singleton.ConfigurationSingletonTest
+hello/core/discount/RateDiscountPolicyTest.java
+ hello.core.discount.RateDiscountPolicyTest
